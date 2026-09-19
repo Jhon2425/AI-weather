@@ -1,66 +1,114 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+
 <plist version="1.0">
 <dict>
+
+	<!-- Minimum iOS / Display -->
 	<key>CADisableMinimumFrameDurationOnPhone</key>
 	<true/>
+
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
+
 	<key>CFBundleDisplayName</key>
 	<string>Rain Clothes App</string>
+
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
+
 	<key>CFBundleIdentifier</key>
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
+
 	<key>CFBundleName</key>
 	<string>rain_clothes_app</string>
+
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
+
 	<key>CFBundleShortVersionString</key>
 	<string>$(FLUTTER_BUILD_NAME)</string>
+
 	<key>CFBundleSignature</key>
 	<string>????</string>
+
 	<key>CFBundleVersion</key>
 	<string>$(FLUTTER_BUILD_NUMBER)</string>
+
+	<!-- Required for iPhone -->
 	<key>LSRequiresIPhoneOS</key>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Cosmos Weather uses your location to show local conditions.</string>
 	<true/>
+
+	<!-- Location permission for weather -->
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Rain Clothes App uses your location to provide local weather conditions.</string>
+
+	<!-- Local Wi-Fi / ESP32 connection -->
+	<key>NSLocalNetworkUsageDescription</key>
+	<string>Rain Clothes App connects to the automated clothesline controller over your local Wi-Fi network.</string>
+
+	<!-- Allow HTTP communication with ESP32 on local network -->
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsLocalNetworking</key>
+		<true/>
+	</dict>
+
+	<!-- Flutter Scene Configuration -->
 	<key>UIApplicationSceneManifest</key>
 	<dict>
+
 		<key>UIApplicationSupportsMultipleScenes</key>
 		<false/>
+
 		<key>UISceneConfigurations</key>
 		<dict>
+
 			<key>UIWindowSceneSessionRoleApplication</key>
 			<array>
+
 				<dict>
 					<key>UISceneClassName</key>
 					<string>UIWindowScene</string>
+
 					<key>UISceneConfigurationName</key>
 					<string>flutter</string>
+
 					<key>UISceneDelegateClassName</key>
 					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
+
 					<key>UISceneStoryboardFile</key>
 					<string>Main</string>
 				</dict>
+
 			</array>
 		</dict>
 	</dict>
+
+	<!-- Indirect input support -->
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+
+	<!-- Launch Screen -->
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
+
+	<!-- Main Storyboard -->
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
+
+	<!-- iPhone Orientation -->
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+
+	<!-- iPad Orientation -->
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
@@ -68,5 +116,6 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+
 </dict>
 </plist>
